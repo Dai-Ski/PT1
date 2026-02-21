@@ -4,6 +4,7 @@ public class user {
     }
 }
 class Admin extends user{
+    @Override
     void role(){
         System.out.println("I am an admin");
     }
