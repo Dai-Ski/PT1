@@ -1,11 +1,17 @@
 import java.util.*;
+<<<<<<< HEAD
 
 public class StringMethod {
     public static void main(String args[]) {
+=======
+public class StringMethod {
+    public static void main(String args[]){
+>>>>>>> 5c37cd68c9b591c0547d4e39732863146cb458cc
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string: ");
         String input = sc.nextLine();
         // find the length
+<<<<<<< HEAD
         System.out.println("Lenght: " + input.length());
         // convert to uppercase
         System.out.println("Uppercase: " + input.toUpperCase());
@@ -15,12 +21,27 @@ public class StringMethod {
         System.out.println(input.charAt(0));
         // slicing, returns sliced string
         System.out.println(input.substring(0, 2));
+=======
+        System.out.println("Lenght: "+input.length());
+        // convert to uppercase
+        System.out.println("Uppercase: "+input.toUpperCase());
+        // convert to lowercase
+        System.out.println("LowerCase: "+input.toLowerCase());
+        // access element using index
+        System.out.println(input.charAt(0));
+        // slicing, returns sliced string
+        System.out.println(input.substring(0,2));
+>>>>>>> 5c37cd68c9b591c0547d4e39732863146cb458cc
         // concatenation can be done with '+' too
         System.out.println(input.concat("the addition part"));
         // equals returns boolean
         System.out.println(input.equals("233"));
         System.out.println(input.equalsIgnoreCase("123ab"));
         // replace(old,new) returns the str
+<<<<<<< HEAD
         System.out.println(input.replace("121", "212"));
+=======
+        System.out.println(input.replace("121","212"));
+>>>>>>> 5c37cd68c9b591c0547d4e39732863146cb458cc
     }
 }
