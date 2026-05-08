@@ -17,5 +17,5 @@ for i, word in enumerate(words):
 
 plt.title("PCA Visualization of Word Embeddings")
 plt.grid(True)
-plt.savefig("plot2.png")
-print("Plot saved to plot2.png")
+plt.show()
+
