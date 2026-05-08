@@ -1,6 +1,4 @@
 from transformers import pipeline
-analyzer = pipeline("sentiment-analysis")
-
-text = "This lab is actually fire."
-result = analyzer(text)[0]
-print(f"{result['label']}: {result['score']:.4f}")
+classifier = pipeline("sentiment-analysis")
+result = classifier("I love using Generative AI for my lab work!")
+print(result)
