@@ -1,15 +1,7 @@
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-import torch
-
-model_name = "facebook/bart-large-cnn"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
-
-text = input("Enter text to summarize: ")
+from transformers import pipeline
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+text = input("Enter text (>30 words): ")
 if len(text.split()) > 30:
-    inputs = tokenizer(text, return_tensors="pt", max_length=1024, truncation=True)
-    summary_ids = model.generate(inputs["input_ids"], max_length=50, min_length=30, do_sample=False)
-    summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-    print(summary)
+    print(summarizer(text, max_length=50, min_length=30, do_sample=False)[0]['summary_text'])
 else:
-    print("Please enter more than 30 words for summarization.")
+    print("Please enter more than 30 words.")
