@@ -5,7 +5,6 @@ tokenized = [s.lower().split() for s in corpus]
 
 # Train Model
 model = Word2Vec(sentences=tokenized, vector_size=5, window=2, min_count=1, epochs=5)
-
 # Find similar
 word = input("Enter word: ").lower()
 if word in model.wv:
